@@ -1,5 +1,3 @@
-
-
 mylist = input("Список: ").lower()
 a = mylist.split()
 print(a)
