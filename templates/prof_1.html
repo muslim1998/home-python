@@ -1,0 +1,9 @@
+{% extends "index_one.html" %}
+{% block content %}
+	<h3><b>Список профессий</b></h3>
+	{% set spisok=['инженер','строитель','врач','экзобиолог','биолог','стоматолог','тренер','учитель','повар'] %}
+	
+	{% for i in spisok %} 
+		<h4>{{ loop.index }} {{ i }}</h4>
+	{% endfor %}
+{% endblock %}

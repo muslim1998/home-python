@@ -1,0 +1,12 @@
+{% extends "index_one.html" %}
+{% block content %}
+<center>
+	<h1><b>Размещение по каютам</b></h1>
+</center>
+{% set names = ['Ридли Скот','Энди Уир','Марк Уотни','Венката Капур','Тедди Сандерс','Шон Бин'] %}
+
+{% for i in names %}
+<h4>{{ i }} - Каюта №{{ loop.index}} {% if loop.first %} - капитан корабля {% endif %}</h4>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "index_one.html" %}
+
+{% block content %}
+<center>
+	<h2>Оформление каюты</h2>
+	<table>
+		<tr>
+			<td style="background-color: #c9c9c9; width: 300px;">
+				<center>
+					Цвет стен
+				</center>
+			</td>
+			<td style="background-color: #c9c9c9; width: 300px;">
+				<center>
+					Эмблема
+				</center>
+			</td>
+		</tr>
+		{% if sex.lower()=='female' and age>=21 %}
+			<tr>
+				<td>
+					<img src="https://www.legendapress.ru/wp-content/uploads/2016/12/krasnyj-kvadrat.jpg" width=300 height=300 alt="color">
+				</td>
+				<td>
+					<img src="https://mymulti.ru/wp-content/uploads/2017/06/chto-dolzhna-znat-zhenshchina-v-30-let.jpg" width=300 height=300 alt="color">
+				</td>
+			</tr>
+		{% elif sex.lower()=='female' and age<=21 %}
+			<tr>
+				<td>
+					<img src="https://www.temptalia.com/wp-content/uploads/2017/03/colour-pop_done-deal_007_product.jpg" width=300 height=300 alt="color">
+				</td>
+				<td>
+					<img src="https://mymulti.ru/wp-content/uploads/2017/06/chto-dolzhna-znat-zhenshchina-v-30-let.jpg" width=300 height=300 alt="color">
+				</td>
+			</tr>
+		{% elif sex.lower()=='male' and age>=21 %}
+			<tr>
+				<td>
+					<img src="https://avatars.mds.yandex.net/i?id=aad2a240bb080535921635613d4ba840-5546399-images-thumbs&n=13" width=300 height=300 alt="color">
+				</td>
+				<td>
+					<img src="https://avatars.mds.yandex.net/i?id=3493a2cb897afa963322b55f58a41591-5876563-images-thumbs&n=13" width=300 height=300 alt="color">
+				</td>
+			</tr>
+		{% elif sex.lower()=='male' and age<=21 %}
+			<tr>
+				<td>
+					<img src="http://zabavnik.club/wp-content/uploads/Picture_22_13071258.jpg" width=300 height=300 alt="color">
+				</td>
+				<td>
+					<img src="https://avatars.mds.yandex.net/i?id=3493a2cb897afa963322b55f58a41591-5876563-images-thumbs&n=13" width=300 height=300 alt="color">
+				</td>
+			</tr>
+		{% endif %}
+	</table>
+</center>
+{% endblock %}
